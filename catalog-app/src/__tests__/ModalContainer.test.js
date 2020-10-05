@@ -12,7 +12,7 @@ import fetch from 'node-fetch';
 const cache = new InMemoryCache();
 const client = new ApolloClient({
     link: createHttpLink({
-        uri: 'http://it2810-38.idi.ntnu.no:3000/graphql',
+        uri: 'http://localhost:3000/graphql',
         fetch: fetch,
     }),
     cache: cache,

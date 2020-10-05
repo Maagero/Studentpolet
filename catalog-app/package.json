@@ -1,5 +1,5 @@
 {
-  "homepage": "http://it2810-38.idi.ntnu.no/prosjekt3",
+  "homepage": "http://localhost:3001/",
   "name": "catalog-app",
   "version": "0.1.0",
   "private": true,
@@ -41,7 +41,7 @@
     "coverage": "jest --coverage",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
-    "db:start": "cd node-react-graphql/server/"
+    "db:start": "cd node-react-graphql/server/ & npm start"
   },
   "jest": {
     "moduleFileExtensions": [

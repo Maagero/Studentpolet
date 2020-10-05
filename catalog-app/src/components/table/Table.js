@@ -65,21 +65,21 @@ function emptyTable() {
 
 class Table extends Component {
   refreshQuery(keys = "", packaging = "", productSelection = "", country = "",
-    yearMin = "", yearMax = "", priceMin, priceMax,
+    yearMin = "", yearMax = "", priceMin = 0, priceMax = 100000,
     skipping = 0, sortAfter = "") {
     // Availbale queries
-    const GET_PRODUCTQUERY = gql`
-      {
+    const GET_PRODUCTQUERY = gql`{
         productQuery(Keys: "${keys}",
+                     Skipping: ${skipping},
                      Packaging: "${packaging}",
                      ProductSelection: "${productSelection}",
                      Country: "${country}",
                      YearMin: "${yearMin}",
                      YearMax: "${yearMax}",
-                     PriceMin: ${priceMin},
-                     PriceMax: ${priceMax},
-                     Skipping: ${skipping},
-                     SortAfter: "${sortAfter}") {
+                     PriceMin: 0,
+                     PriceMax: 10000000,
+          					 SortAfter: "${sortAfter}"
+                     ) {
           Varenummer
           Varenavn
           Volum
